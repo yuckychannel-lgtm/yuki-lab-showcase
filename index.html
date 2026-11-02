@@ -1,0 +1,217 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#0a0910" />
+  <meta name="description" content="YUKI LAB公式プロダクトショーケース。FiveM向けCAR AUDIOの画像、機能、価格をチェック。" />
+  <title>YUKI LAB | PRODUCT SHOWCASE</title>
+  <style>
+    :root{color-scheme:dark;--bg:#0a0910;--panel:#17131f;--soft:#201829;--purple:#9653f7;--purple2:#bd96ff;--edge:rgba(191,141,255,.27);--text:#f8f5ff;--muted:#b6a8c7;--smoke:#8d809f}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(ellipse 75% 45% at 50% -5%,#281239 0%,#0a0910 65%);font-family:Inter,Arial,'Noto Sans JP',sans-serif;color:var(--text);line-height:1.6}button,a{font:inherit}button{cursor:pointer}a{color:inherit;text-decoration:none}a:focus-visible,button:focus-visible,[tabindex]:focus-visible{outline:3px solid #d3abff;outline-offset:3px}button:disabled{cursor:not-allowed;opacity:.5}
+    .shell{width:min(1160px,calc(100% - 48px));margin:auto}.topbar{position:sticky;top:0;z-index:15;background:rgba(11,9,18,.91);border-bottom:1px solid #282035;backdrop-filter:blur(16px)}.nav{height:77px;display:flex;align-items:center;justify-content:space-between;gap:20px}.logo{font-size:23px;font-weight:900;letter-spacing:1px}.logo span{color:#bb88ff}.navlinks{display:flex;align-items:center;gap:24px;color:#cbbcdf;font-size:13px;font-weight:750;letter-spacing:.08em}.navlinks a:hover{color:#fff}.nav-cta{border:1px solid #715093;background:#23192c;border-radius:9px;padding:11px 15px;font-size:12px;font-weight:800}.nav-cta:hover{background:#382448}
+    .eyebrow{font-size:11px;font-weight:800;letter-spacing:.25em;color:#c9a5ff}.hero{padding:86px 0 52px;text-align:center}.hero h1{font-size:clamp(40px,6.8vw,78px);line-height:1.06;letter-spacing:-.065em;margin:14px 0 18px;font-weight:900}.hero h1 span{color:#b17aff}.hero p{color:#c4b6d2;font-size:clamp(13px,1.8vw,16px);margin:0 auto;max-width:620px}.hero .line{display:block;width:95px;height:3px;border-radius:10px;background:linear-gradient(90deg,#7c31d4,#c58fff);margin:29px auto 0}
+    .flagline{display:flex;gap:10px;align-items:center;justify-content:center;flex-wrap:wrap;margin:0 0 22px}.pill{font-size:10px;letter-spacing:.09em;font-weight:850;background:#251930;color:#cfb4f5;border:1px solid #644576;border-radius:60px;padding:6px 11px}.status{font-size:11px;color:#decaf1;border:1px solid var(--edge);border-radius:50px;padding:6px 12px;display:inline-flex;align-items:center;gap:8px}.status::before{content:"";width:7px;height:7px;border-radius:50%;background:#b79dcf}.status.live::before{background:#77deb3;box-shadow:0 0 0 3px rgba(119,222,179,.16)}
+    .product-card{display:grid;grid-template-columns:minmax(0,1.14fr) minmax(300px,.86fr);gap:0;border:1px solid #4b3260;border-radius:22px;overflow:hidden;background:linear-gradient(130deg,#22172e 0%,#16121f 65%);box-shadow:0 25px 95px #0008;cursor:pointer;transition:transform .25s,border-color .25s}.product-card:hover{border-color:#9e70ce;transform:translateY(-2px)}.gallery-area{position:relative;display:flex;align-items:center;justify-content:center;background:radial-gradient(circle at 50% 35%,#38204c,#0e0b16 75%);min-width:0;min-height:510px;padding:32px 45px 23px}.gallery-view{width:min(100%,430px);position:relative;display:flex;flex-direction:column;align-items:center}.gallery-photo{width:min(100%,400px);aspect-ratio:1/1;object-fit:contain;filter:drop-shadow(0 16px 20px #0006);border-radius:11px}.gallery-marker{font-size:11px;font-weight:700;color:#cab8de;text-align:center;margin-top:12px;min-height:20px}.gallery-ctrl{position:absolute;top:45%;transform:translateY(-50%);border:1px solid #5d4570;background:#221a30df;color:#fff;width:37px;height:48px;border-radius:10px;display:grid;place-items:center;font-size:24px;z-index:2}.gallery-ctrl:hover{background:#7740ba}.gallery-ctrl.prev{left:-29px}.gallery-ctrl.next{right:-29px}.gallery-dots{display:flex;gap:9px;justify-content:center;align-items:center;margin-top:10px}.gallery-dots button{width:23px;height:5px;border-radius:12px;border:0;background:#5c4c6f;padding:0;transition:width .2s,background .2s}.gallery-dots button[aria-current=true]{width:32px;background:#b77bff}.gallery-counter{font-size:11px;color:#e1c9f4;position:absolute;top:18px;left:20px;letter-spacing:.1em}.gallery-tip{position:absolute;bottom:18px;left:20px;font-size:10px;color:#a895bc}
+    .product-info{padding:46px 40px 42px;display:flex;flex-direction:column;align-items:flex-start;justify-content:center}.product-info h2{font-weight:900;line-height:1.12;font-size:clamp(31px,3.7vw,48px);letter-spacing:-.055em;margin:14px 0 15px}.product-info .description{color:#cabbd9;font-size:14px;max-width:390px}.product-info .description-en{font-size:12px;color:#998ba9;margin:0 0 22px}.sku{font-size:11px;color:#c9a2f1;letter-spacing:.12em;font-weight:750}.product-info .tags{display:flex;gap:7px;flex-wrap:wrap;margin:5px 0 20px}.price-row{display:flex;align-items:baseline;gap:10px;margin:14px 0 5px}.price{color:#b67aff;font-size:35px;font-weight:950;letter-spacing:-.06em}.price-note{font-size:11px;color:#b7a4ca}.validation{font-size:11px;color:#b9a7c9;margin:0 0 21px;min-height:17px}.btn{display:inline-flex;justify-content:center;align-items:center;gap:9px;padding:13px 20px;min-height:45px;border-radius:10px;border:1px solid transparent;font-size:13px;font-weight:850;transition:background .2s,transform .2s}.btn:hover{transform:translateY(-1px)}.btn-primary{background:#8746dd;color:#fff}.btn-primary:hover{background:#a05cef}.btn-outline{background:transparent;border-color:#6b4a87;color:#eddbff}.btn-outline:hover{background:#30213b}.btn-small{padding:9px 13px;font-size:12px;min-height:38px}.card-button-line{display:flex;gap:10px;flex-wrap:wrap}.card-hint{font-size:11px;color:#b59fc8;margin:20px 0 0}
+    .mini-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin:25px 0 0}.mini{background:#16121e;border:1px solid #40304e;padding:19px 20px;border-radius:14px}.mini h3{margin:5px 0 8px;font-size:14px}.mini p{font-size:12px;color:#ad9ebc;margin:0}.mini svg{width:22px;height:22px;stroke:#b181ec;stroke-width:1.6;fill:none}.section-header{text-align:center;margin:82px 0 23px}.section-header h2{font-size:31px;margin:11px 0 8px;letter-spacing:-.02em}.section-header p{font-size:13px;color:#b3a3c4;margin:0}.support{background:linear-gradient(135deg,#261532,#140e1f);border:1px solid #603d80;border-radius:20px;padding:30px;display:flex;gap:30px;align-items:center;justify-content:space-between;margin-bottom:80px}.support h2{font-size:25px;margin:9px 0 8px}.support p{font-size:13px;color:#cbbbd8;margin:0 0 5px}.support small{font-size:11px;color:#a998bc}.footer{border-top:1px solid #292135;padding:30px 0 40px;color:#ad9fba;font-size:12px}.foot-inner{display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap}
+    .modal-backdrop{position:fixed;inset:0;background:rgba(0,0,0,.78);backdrop-filter:blur(9px);display:none;align-items:center;justify-content:center;z-index:30;padding:22px}.modal-backdrop.open{display:flex}.modal{position:relative;background:#191420;border:1px solid #7a4da3;border-radius:20px;width:min(100%,970px);max-height:min(90vh,900px);overflow-y:auto;box-shadow:0 32px 130px #000c}.modal-inner{padding:36px}.modal-close{position:sticky;top:10px;float:right;z-index:3;background:#3b2b49;color:#fff;border:1px solid #8661a1;border-radius:9px;width:37px;height:37px;font-size:20px}.modal-grid{display:grid;grid-template-columns:minmax(0,.98fr) minmax(0,1.02fr);gap:35px;align-items:center;margin-top:6px}.modal-photo{display:block;width:100%;max-height:420px;object-fit:contain;aspect-ratio:1/1;background:radial-gradient(circle,#30203e,#0d0a13);border-radius:12px}.modal-thumbs{display:flex;gap:10px;margin-top:12px;overflow:auto;padding:2px 0}.modal-thumbs button{padding:0;border:2px solid transparent;border-radius:8px;background:#2a2034;width:67px;height:67px;flex:0 0 67px;overflow:hidden}.modal-thumbs button[aria-current=true]{border-color:#bd8aff}.modal-thumbs img{width:100%;height:100%;object-fit:cover}.modal-title{font-size:clamp(28px,4vw,42px);line-height:1.12;letter-spacing:-.05em;margin:9px 0}.modal-lead{font-size:13px;line-height:1.8;color:#c8bbd5}.features{margin:14px 0 22px;padding-left:21px;color:#ddd0e8;font-size:13px;line-height:1.9}.buy-note{font-size:11px;color:#b2a4c1;margin:10px 0 0}.modal-below{margin-top:30px;border-top:1px solid #40304f;padding-top:18px;display:flex;flex-wrap:wrap;gap:8px;align-items:center;justify-content:space-between}.modal-below p{color:#ac97c2;font-size:12px;margin:0}.modal-below .btn{font-size:12px}.demo-banner{font-size:12px;border:1px solid #a4792b;background:#382c18;color:#f3d9a1;padding:11px 14px;border-radius:9px;margin-bottom:18px}.error-banner{color:#f3c5cd;border:1px solid #8d425c;background:#391927}.hidden{display:none!important}
+    @media(max-width:840px){.hero{padding:58px 0 36px}.product-card{grid-template-columns:1fr;max-width:575px;margin:auto}.gallery-area{min-height:unset;padding:28px 42px 24px}.gallery-view{width:min(100%,410px)}.product-info{padding:22px 30px 34px}.product-info h2{font-size:clamp(27px,7vw,38px)}.mini-grid{grid-template-columns:1fr}.support{flex-direction:column;text-align:center;gap:18px}.modal-grid{grid-template-columns:1fr}.modal-inner{padding:22px}.modal-title{font-size:31px}}
+    @media(max-width:500px){.shell{width:min(100% - 28px,1160px)}.nav{height:67px}.logo{font-size:19px}.navlinks{gap:13px;font-size:11px}.navlinks .hide-small{display:none}.hero{padding:53px 0 29px}.hero h1{font-size:clamp(38px,10vw,54px)}.product-card{border-radius:15px}.gallery-area{padding:24px 34px 22px}.gallery-ctrl.prev{left:-24px}.gallery-ctrl.next{right:-24px}.gallery-ctrl{width:31px;height:39px}.product-info{padding:16px 22px 27px}.product-info h2{font-size:29px;margin:10px 0}.price{font-size:30px}.modal-backdrop{padding:8px}.modal{max-height:94vh}.modal-inner{padding:18px}.modal-grid{gap:17px}.modal-title{font-size:28px}.support{padding:25px 19px}.section-header{margin-top:63px}}
+    @media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;transition:none!important;animation:none!important}}
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <div class="shell nav">
+      <a href="#top" class="logo" aria-label="YUKI LAB トップ">YUKI <span>LAB</span></a>
+      <nav class="navlinks" aria-label="メインナビゲーション">
+        <a class="hide-small" href="#product">PRODUCTS</a><a href="#support">SUPPORT</a>
+        <a class="nav-cta" href="https://yuki-lab.tebex.store" id="storeNav" target="_blank" rel="noopener noreferrer">TEBEX STORE ↗</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top" class="shell">
+    <section class="hero" aria-label="YUKI LAB">
+      <div class="eyebrow">YUKI LAB / CUSTOMS & CREATIONS</div>
+      <h1>YOUR WORLD.<br><span>OUR CODE.</span></h1>
+      <p>FiveMの世界をもっと自由に、もっと楽しく。<br>オリジナルのFiveMスクリプトを、あなたのサーバーに。</p>
+      <span class="line"></span>
+    </section>
+
+    <div class="flagline"><span class="pill">QB-CORE</span><span class="pill">QBOX</span><span class="pill">JP / EN</span><span class="status" id="apiState" aria-live="polite">デモ表示 / Tebex未連携</span></div>
+    <div id="demoNotice" class="demo-banner" role="status">この試作品はデモ表示です。価格は参考値・画像は仮素材です。Tebexの公開トークン設定後に実データへ切り替わります。</div>
+
+    <section id="product" aria-label="商品カード">
+      <div class="product-card" id="productCard" role="button" tabindex="0" aria-label="YUKI LAB CAR AUDIOの商品詳細を開く">
+        <div class="gallery-area" id="galleryArea">
+          <div class="gallery-counter" id="galleryCounter">01 / 03</div>
+          <div class="gallery-view">
+            <button class="gallery-ctrl prev" id="prevSlide" aria-label="前の画像">‹</button>
+            <img id="galleryImage" class="gallery-photo" src="assets/car-audio-preview.webp" alt="YUKI LAB CAR AUDIO商品紹介画像" />
+            <button class="gallery-ctrl next" id="nextSlide" aria-label="次の画像">›</button>
+            <div class="gallery-marker" id="galleryCaption">PRODUCT ARTWORK</div>
+            <div class="gallery-dots" id="galleryDots" aria-label="画像の切り替え"></div>
+          </div>
+          <div class="gallery-tip">自動スライド / 矢印で切り替え</div>
+        </div>
+        <div class="product-info">
+          <div class="sku">01 / FEATURED PRODUCT</div>
+          <h2 id="cardTitle">YUKI LAB<br>CAR AUDIO</h2>
+          <p class="description">車内音楽をもっと自由に。通常用・業務用の音響、同期再生、距離に応じた音量減衰。</p>
+          <p class="description-en">Synchronized vehicle audio for FiveM.</p>
+          <div class="tags"><span class="pill">AUDIO</span><span class="pill">ON DUTY</span><span class="pill">MULTIPLAYER</span></div>
+          <div class="price-row"><span class="price" id="cardPrice">$9.99</span><span class="price-note" id="priceKind">参考価格</span></div>
+          <p class="validation" id="priceNote">※ 正式な価格はTebexの商品ページで確認できます。</p>
+          <div class="card-button-line"><button type="button" class="btn btn-primary" id="viewDetails">VIEW DETAILS <span aria-hidden="true">↗</span></button><a class="btn btn-outline" id="cardTebexLink" href="https://yuki-lab.tebex.store/package/7635878" target="_blank" rel="noopener noreferrer">OFFICIAL PAGE ↗</a></div>
+          <p class="card-hint">商品カードのどこを押しても詳細が開きます。</p>
+        </div>
+      </div>
+      <div class="mini-grid">
+        <div class="mini"><svg viewBox="0 0 24 24"><path d="M4 12c2-5 3 5 5 0s3 5 5 0 3 5 6 0" stroke-linecap="round"/></svg><h3>Synced Audio</h3><p>車両の周囲で同期して聴こえる、RP向けの音楽体験。</p></div>
+        <div class="mini"><svg viewBox="0 0 24 24"><rect x="4" y="6" width="16" height="12" rx="2"/><path d="M9 10v4m4-6v8m4-6v4"/></svg><h3>Standard & Business</h3><p>通常用と業務用のカーステレオに対応。</p></div>
+        <div class="mini"><svg viewBox="0 0 24 24"><path d="M4 12h16M12 4v16M7 7l10 10M17 7 7 17"/></svg><h3>JP / EN Interface</h3><p>日本語・英語に対応した操作インターフェース。</p></div>
+      </div>
+    </section>
+
+    <div class="section-header" id="support"><div class="eyebrow">YUKI LAB / OFFICIAL SUPPORT</div><h2>NEED HELP?</h2><p>導入ガイド・FAQ・技術サポートは公式Discordでご案内。</p></div>
+    <section class="support" aria-label="Discordサポート">
+      <div><div class="eyebrow">AFTER PURCHASE / OPTIONAL</div><h2>Official Discord Support</h2><p>購入後の導入・設定・不具合相談を受け付けています。</p><small>サポートサーバーへの参加は任意です。購入にDiscord参加は必要ありません。</small></div>
+      <a id="discordLink" class="btn btn-primary" href="https://discord.gg/rbuBfTBnk" target="_blank" rel="noopener noreferrer">JOIN OUR DISCORD ↗</a>
+    </section>
+  </main>
+  <footer class="footer"><div class="shell foot-inner"><span>© 2026 YUKI LAB · Independent showroom prototype</span><span>支払い・認証・商品配布はTebex / Cfx.reで行われます。</span></div></footer>
+
+  <div id="modalBackdrop" class="modal-backdrop" role="presentation">
+    <section class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle" id="detailsModal" tabindex="-1">
+      <button type="button" class="modal-close" id="closeModal" aria-label="詳細を閉じる">×</button>
+      <div class="modal-inner">
+        <div class="eyebrow">YUKI LAB / PRODUCT DETAILS</div>
+        <div class="modal-grid">
+          <div>
+            <img id="modalImage" class="modal-photo" src="assets/car-audio-preview.webp" alt="商品画像" />
+            <div class="modal-thumbs" id="modalThumbs" aria-label="商品画像一覧"></div>
+            <p id="modalImageCaption" style="font-size:11px;color:#b49bcf;margin:9px 0 0"></p>
+          </div>
+          <div>
+            <h2 class="modal-title" id="modalTitle">YUKI LAB CAR AUDIO</h2>
+            <p class="modal-lead">車内で音楽を楽しむ通常用・業務用カーオーディオ。リアルな距離減衰・同期再生・多言語UI。</p>
+            <div class="tags"><span class="pill">QB-CORE</span> <span class="pill">QBOX</span> <span class="pill">JP / EN</span></div>
+            <ul class="features">
+              <li>同乗者・周囲のプレイヤーへの同期再生</li><li>車両との距離による音量減衰</li><li>通常用・業務用カーステレオ</li><li>プレイリスト・お気に入り・曲検索</li>
+            </ul>
+            <div class="price-row"><span class="price" id="modalPrice">$9.99</span><span class="price-note" id="modalPriceKind">参考価格</span></div>
+            <p class="buy-note" id="modalPriceNote">正確な価格はTebex側で確認してください。</p>
+            <a class="btn btn-primary" id="modalBuy" href="https://yuki-lab.tebex.store/package/7635878" target="_blank" rel="noopener noreferrer" style="margin-top:15px">TEBEXで購入手続きへ ↗</a>
+            <p class="buy-note">Tebexの商品ページに移動します。購入時にはCfx.re等の認証が必要になる場合があります。</p>
+          </div>
+        </div>
+        <div class="modal-below"><p>デモ動画と導入ガイドも確認できます。</p><div style="display:flex;gap:9px;flex-wrap:wrap"><a id="demoLink" class="btn btn-outline btn-small" href="#" target="_blank" rel="noopener noreferrer">WATCH DEMO ↗</a><a id="docsLink" class="btn btn-outline btn-small" href="#" target="_blank" rel="noopener noreferrer">DOCUMENTATION ↗</a></div></div>
+      </div>
+    </section>
+  </div>
+  <script src="config.js"></script>
+  <script>
+    (() => {
+      'use strict';
+      const cfg = window.YUKI_LAB_CONFIG || {};
+      const $ = id => document.getElementById(id);
+      const productURL = `${String(cfg.storeUrl || 'https://yuki-lab.tebex.store').replace(/\/$/,'')}/package/${Number(cfg.packageId) || 7635878}`;
+      const demoImages = [
+        {url:'assets/car-audio-preview.webp',caption:'PRODUCT ARTWORK · 参考画像',kind:'image'},
+        {url:'https://img.youtube.com/vi/F4-W9wXxPPQ/hqdefault.jpg',caption:'PRODUCT OVERVIEW · 5分デモ動画のサムネイル',kind:'video',link:cfg.productOverviewUrl},
+        {url:'https://img.youtube.com/vi/RYH9loM9eTo/hqdefault.jpg',caption:'GAMEPLAY DEMO · 80秒動画のサムネイル',kind:'video',link:cfg.gameplayDemoUrl}
+      ];
+      let gallery=[...demoImages], active=0, autoTimer=null, lastFocus=null, live=false;
+      let pointerStartX=null;
+      const setLink=(id,url)=>{if(url) $(id).href=url};
+      setLink('storeNav',cfg.storeUrl);setLink('cardTebexLink',productURL);setLink('modalBuy',productURL);
+      setLink('discordLink',cfg.discordInvite);setLink('demoLink',cfg.gameplayDemoUrl);setLink('docsLink',cfg.docsUrl);
+      const stop=(ev)=>ev.stopPropagation();
+      $('cardTebexLink').addEventListener('click',stop);
+      const safeUrl=(value)=>{try{const u=new URL(value,location.href);return ['https:','http:'].includes(u.protocol)?u.href:null;}catch{return null}};
+      function fillDots(){
+        $('galleryDots').replaceChildren();
+        gallery.forEach((_,i)=>{const b=document.createElement('button');b.type='button';b.setAttribute('aria-label',`画像${i+1}を表示`);b.setAttribute('aria-current',String(i===active));b.addEventListener('click',ev=>{stop(ev);showSlide(i);restartAuto()});$('galleryDots').append(b)});
+      }
+      function showSlide(index){
+        if(!gallery.length)return;
+        active=((index%gallery.length)+gallery.length)%gallery.length;
+        const current=gallery[active];$('galleryImage').src=current.url;$('galleryImage').alt=`YUKI LAB CAR AUDIO ${active+1}枚目: ${current.caption}`;
+        $('galleryCaption').textContent=current.caption;
+        $('galleryCounter').textContent=`${String(active+1).padStart(2,'0')} / ${String(gallery.length).padStart(2,'0')}`;
+        [...$('galleryDots').children].forEach((b,i)=>b.setAttribute('aria-current',String(active===i)));
+        $('modalImage').src=current.url;$('modalImage').alt=current.caption;
+        $('modalImageCaption').textContent=current.kind==='video'?`${current.caption}（WATCH DEMOから動画へ）`:current.caption;
+        [...$('modalThumbs').children].forEach((b,i)=>b.setAttribute('aria-current',String(active===i)));
+      }
+      function fillThumbs(){
+        $('modalThumbs').replaceChildren();
+        gallery.forEach((item,i)=>{const b=document.createElement('button');b.type='button';b.setAttribute('aria-label',`商品画像${i+1}を表示`);b.setAttribute('aria-current',String(i===active));const im=document.createElement('img');im.src=item.url;im.alt=item.caption;im.loading='lazy';b.append(im);b.addEventListener('click',()=>{showSlide(i);restartAuto()});$('modalThumbs').append(b)});
+      }
+      function refreshGallery(){active=0;fillDots();fillThumbs();showSlide(0)}
+      function stopAuto(){if(autoTimer){clearInterval(autoTimer);autoTimer=null}}
+      function startAuto(){stopAuto();if(gallery.length>1&&!matchMedia('(prefers-reduced-motion: reduce)').matches&&!document.hidden&&!$('modalBackdrop').classList.contains('open'))autoTimer=setInterval(()=>showSlide(active+1),5200)}
+      function restartAuto(){startAuto()}
+      $('prevSlide').addEventListener('click',e=>{stop(e);showSlide(active-1);restartAuto()});
+      $('nextSlide').addEventListener('click',e=>{stop(e);showSlide(active+1);restartAuto()});
+      $('galleryArea').addEventListener('mouseenter',stopAuto);$('galleryArea').addEventListener('mouseleave',startAuto);
+      $('galleryArea').addEventListener('focusin',stopAuto);$('galleryArea').addEventListener('focusout',()=>setTimeout(()=>{if(!$('galleryArea').contains(document.activeElement))startAuto()},0));
+      $('galleryArea').addEventListener('touchstart',ev=>{pointerStartX=ev.changedTouches[0].clientX},{passive:true});
+      $('galleryArea').addEventListener('touchend',ev=>{if(pointerStartX===null)return;const diff=ev.changedTouches[0].clientX-pointerStartX;pointerStartX=null;if(Math.abs(diff)>45){stop(ev);showSlide(active+(diff<0?1:-1));restartAuto()}},{passive:true});
+      function openDetails(){lastFocus=document.activeElement;stopAuto();$('modalBackdrop').classList.add('open');document.body.style.overflow='hidden';$('closeModal').focus()}
+      function closeDetails(){$('modalBackdrop').classList.remove('open');document.body.style.overflow='';startAuto();if(lastFocus?.focus)lastFocus.focus()}
+      $('productCard').addEventListener('click',e=>{if(e.target.closest('button,a'))return;openDetails()});
+      $('productCard').addEventListener('keydown',e=>{if(e.target!==$('productCard'))return;if(e.key==='Enter'||e.key===' '){e.preventDefault();openDetails()}});
+      $('viewDetails').addEventListener('click',e=>{stop(e);openDetails()});
+      $('closeModal').addEventListener('click',closeDetails);
+      $('modalBackdrop').addEventListener('click',e=>{if(e.target===$('modalBackdrop'))closeDetails()});
+      document.addEventListener('keydown',e=>{if(e.key==='Escape'&&$('modalBackdrop').classList.contains('open'))closeDetails();else if($('modalBackdrop').classList.contains('open')&&e.key==='ArrowRight'){showSlide(active+1);e.preventDefault()}else if($('modalBackdrop').classList.contains('open')&&e.key==='ArrowLeft'){showSlide(active-1);e.preventDefault()}else if(e.key==='Tab'&&$('modalBackdrop').classList.contains('open')){const nodes=[...$('detailsModal').querySelectorAll('button,a[href]')].filter(n=>n.getClientRects().length);if(!nodes.length)return;const first=nodes[0],last=nodes[nodes.length-1];if(e.shiftKey&&document.activeElement===first){e.preventDefault();last.focus()}else if(!e.shiftKey&&document.activeElement===last){e.preventDefault();first.focus()}}});
+      document.addEventListener('visibilitychange',()=>document.hidden?stopAuto():startAuto());
+      function parseMedia(pkg){
+        const items=Array.isArray(pkg.media)?pkg.media:[];
+        const imgItems=items.filter(x=>x&&String(x.type||'image').toLowerCase()==='image'&&safeUrl(x.url))
+          .sort((a,b)=>Number(Boolean(b.primary))-Number(Boolean(a.primary))||Number(a.order||0)-Number(b.order||0))
+          .map((x,i)=>({url:safeUrl(x.url),caption:`GALLERY IMAGE ${String(i+1).padStart(2,'0')}`,kind:'image'}));
+        const cover=safeUrl(typeof pkg.image==='string'?pkg.image:pkg.image?.url);
+        if(cover&&!imgItems.some(x=>x.url===cover))imgItems.unshift({url:cover,caption:'PRODUCT COVER',kind:'image'});
+        return imgItems.length?imgItems:demoImages;
+      }
+      function formatPrice(amount,currency){
+        if(!Number.isFinite(Number(amount)))return null;
+        try{return new Intl.NumberFormat('en-US',{style:'currency',currency:currency||'USD',minimumFractionDigits:2,maximumFractionDigits:2}).format(Number(amount))}catch{return `${currency||'USD'} ${Number(amount).toFixed(2)}`}
+      }
+      function setPrice(text){$('cardPrice').textContent=text;$('modalPrice').textContent=text}
+      async function loadLive(){
+        const token=String(cfg.tebexPublicToken||'').trim();
+        if(!token){refreshGallery();startAuto();return}
+        $('apiState').textContent='Tebexと接続中…';
+        try{
+          const controller=new AbortController();const timeout=setTimeout(()=>controller.abort(),12000);
+          let res;try{res=await fetch(`https://headless.tebex.io/api/accounts/${encodeURIComponent(token)}/packages/${encodeURIComponent(cfg.packageId||7635878)}`,{headers:{Accept:'application/json'},cache:'no-store',signal:controller.signal})}finally{clearTimeout(timeout)}
+          if(!res.ok)throw new Error(`HTTP ${res.status}`);
+          const json=await res.json();const raw=json&&json.data;const pkg=Array.isArray(raw)?raw.find(item=>Number(item?.id)===Number(cfg.packageId||7635878)):raw;if(!pkg||typeof pkg!=='object'||Array.isArray(pkg))throw new Error('Unexpected API response');
+          if(Number(pkg.id)!==Number(cfg.packageId||7635878))throw new Error('Product ID mismatch');
+          const p=formatPrice(pkg.total_price??pkg.base_price,pkg.currency);
+          if(!p)throw new Error('Missing price information');
+          const name=String(pkg.name||'YUKI LAB CAR AUDIO');$('cardTitle').textContent=name;$('modalTitle').textContent=name;
+          setPrice(p);$('priceKind').textContent='Tebex連動価格';$('modalPriceKind').textContent='Tebex連動価格';
+          $('priceNote').textContent='現在の公開価格です。税・地域・割引など最終金額は購入画面を優先。';
+          $('modalPriceNote').textContent='Tebexの公開価格を自動取得しました。最終金額は決済画面で確認してください。';
+          live=true;gallery=parseMedia(pkg);refreshGallery();startAuto();
+          $('apiState').classList.add('live');$('apiState').textContent='Tebexライブ接続中';$('demoNotice').classList.add('hidden');
+        }catch(err){
+          $('apiState').textContent='価格取得失敗 / 公式ページで確認';
+          $('demoNotice').classList.add('error-banner');$('demoNotice').textContent=`Tebex APIから価格・画像を取得できませんでした（${err.message}）。このページの価格は参考値です。正式な価格はTebexでご確認ください。`;
+          $('cardPrice').textContent='価格はTebexで確認';$('cardPrice').style.fontSize='21px';$('modalPrice').textContent='価格はTebexで確認';$('modalPrice').style.fontSize='21px';
+          $('priceKind').textContent='取得不可';$('modalPriceKind').textContent='取得不可';
+          $('priceNote').textContent='Tebex公開価格を確認できませんでした。';$('modalPriceNote').textContent='購入前にTebexページの価格をご確認ください。';
+          refreshGallery();startAuto();
+        }
+      }
+      refreshGallery();loadLive();
+    })();
+  </script>
+</body>
+</html>
