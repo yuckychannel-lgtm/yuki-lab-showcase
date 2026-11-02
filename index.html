@@ -20,6 +20,32 @@
     @media(max-width:840px){.hero{padding:58px 0 36px}.product-card{grid-template-columns:1fr;max-width:575px;margin:auto}.gallery-area{min-height:unset;padding:28px 42px 24px}.gallery-view{width:min(100%,410px)}.product-info{padding:22px 30px 34px}.product-info h2{font-size:clamp(27px,7vw,38px)}.mini-grid{grid-template-columns:1fr}.support{flex-direction:column;text-align:center;gap:18px}.modal-grid{grid-template-columns:1fr}.modal-inner{padding:22px}.modal-title{font-size:31px}}
     @media(max-width:500px){.shell{width:min(100% - 28px,1160px)}.nav{height:67px}.logo{font-size:19px}.navlinks{gap:13px;font-size:11px}.navlinks .hide-small{display:none}.hero{padding:53px 0 29px}.hero h1{font-size:clamp(38px,10vw,54px)}.product-card{border-radius:15px}.gallery-area{padding:24px 34px 22px}.gallery-ctrl.prev{left:-24px}.gallery-ctrl.next{right:-24px}.gallery-ctrl{width:31px;height:39px}.product-info{padding:16px 22px 27px}.product-info h2{font-size:29px;margin:10px 0}.price{font-size:30px}.modal-backdrop{padding:8px}.modal{max-height:94vh}.modal-inner{padding:18px}.modal-grid{gap:17px}.modal-title{font-size:28px}.support{padding:25px 19px}.section-header{margin-top:63px}}
     @media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;transition:none!important;animation:none!important}}
+
+    /* Full pre-purchase information inside the existing product modal */
+    .details-content{margin-top:30px;border-top:1px solid #493653;padding-top:25px}
+    .details-heading{font-size:22px;line-height:1.35;margin:6px 0 10px;color:#fff}
+    .details-intro{font-size:13px;color:#bbaaca;margin:0 0 17px;line-height:1.8}
+    .video-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin:18px 0 27px}
+    .video-card{display:flex;flex-direction:column;gap:9px;padding:17px;background:#251a30;border:1px solid #604276;border-radius:13px;color:#eee1fa;text-decoration:none}
+    .video-card:hover,.video-card:focus-visible{border-color:#bb88ff;background:#30213d}
+    .video-card strong{font-size:14px;line-height:1.5;color:#fff}
+    .video-card span{font-size:12px;line-height:1.7;color:#baaccb}
+    .video-link{color:#ccabff!important;font-weight:800;letter-spacing:.02em}
+    .info-language{border:1px solid #5c4073;border-radius:12px;background:#1e1728;margin-top:12px;overflow:hidden}
+    .info-language summary{cursor:pointer;display:flex;align-items:center;gap:10px;justify-content:space-between;padding:16px 19px;color:#f4e8ff;font-weight:800;font-size:15px}
+    .info-language summary::after{content:'＋';color:#bb88ff;font-size:21px;line-height:1}
+    .info-language[open] summary::after{content:'−'}
+    .info-language summary:hover{background:#2b1d38}
+    .language-body{padding:1px 19px 20px;color:#cbbcd8;font-size:13px;line-height:1.9}
+    .language-body h4{color:#e6d1ff;font-size:14px;margin:19px 0 7px}
+    .language-body p{margin:7px 0 12px}
+    .language-body ul{padding-left:21px;margin:7px 0 12px}
+    .language-body li{padding-left:2px;margin:3px 0}
+    .language-body code{font-size:12px;color:#f1d4ff;background:#2d2039;border-radius:4px;padding:1px 5px}
+    .details-checkout{margin-top:24px;padding:20px;border:1px solid #68498b;border-radius:13px;background:linear-gradient(135deg,#261934,#191321);display:flex;align-items:center;justify-content:space-between;gap:15px;flex-wrap:wrap}
+    .details-checkout strong{color:#fff;font-size:14px}
+    .details-checkout p{margin:4px 0 0;font-size:11px;color:#b4a0c7}
+    @media(max-width:620px){.video-grid{grid-template-columns:1fr}.details-heading{font-size:20px}.details-checkout .btn{width:100%}}
   </style>
 </head>
 <body>
@@ -108,7 +134,93 @@
             <p class="buy-note">Tebexの商品ページに移動します。購入時にはCfx.re等の認証が必要になる場合があります。</p>
           </div>
         </div>
-        <div class="modal-below"><p>デモ動画と導入ガイドも確認できます。</p><div style="display:flex;gap:9px;flex-wrap:wrap"><a id="demoLink" class="btn btn-outline btn-small" href="#" target="_blank" rel="noopener noreferrer">WATCH DEMO ↗</a><a id="docsLink" class="btn btn-outline btn-small" href="#" target="_blank" rel="noopener noreferrer">DOCUMENTATION ↗</a></div></div>
+
+        <section class="details-content" aria-label="購入前に確認する商品情報">
+          <div class="eyebrow">BEFORE YOU BUY / PRODUCT GUIDE</div>
+          <h3 class="details-heading">動画・仕様・導入情報 / Videos &amp; Specifications</h3>
+          <p class="details-intro">購入前に製品の動作・対応環境・同梱物・ライセンスを確認できます。<br>Review the demonstrations, requirements, package contents and license before purchase.</p>
+
+          <div class="video-grid" aria-label="製品紹介動画">
+            <a class="video-card" id="overviewLink" href="https://www.youtube.com/watch?v=F4-W9wXxPPQ" target="_blank" rel="noopener noreferrer">
+              <strong>▶ 🇯🇵 5分の商品紹介動画 / 🇬🇧 5-minute overview</strong>
+              <span>主な機能・操作方法・UI・業務用カーオーディオを詳しく紹介。<br>Detailed walkthrough of features, controls, interface and professional audio.</span>
+              <span class="video-link">WATCH PRODUCT OVERVIEW ↗</span>
+            </a>
+            <a class="video-card" id="demoLink" href="https://www.youtube.com/watch?v=RYH9loM9eTo" target="_blank" rel="noopener noreferrer">
+              <strong>▶ 🇯🇵 80秒デモ動画 / 🇬🇧 80-second gameplay demo</strong>
+              <span>FiveM内で実際に動作する様子を短時間で確認。<br>A short gameplay demonstration of CAR AUDIO running in FiveM.</span>
+              <span class="video-link">WATCH GAMEPLAY DEMO ↗</span>
+            </a>
+          </div>
+
+          <details class="info-language" open>
+            <summary>🇯🇵 日本語の商品説明・導入情報</summary>
+            <div class="language-body">
+              <p>YUKI LAB CAR AUDIOは、FiveM向けの車両追従型・同期カーオーディオMODです。車両で音楽を再生し、周囲のプレイヤーとも同期します。音量は車両との距離に応じて自然に減衰します。</p>
+              <p>一般用と業務用の2種類のカーオーディオを収録。業務用では、対象ジョブのON DUTY中に専用楽曲を利用できます。警察・EMS・整備士向けの設定例が同梱されており、ジョブ名や楽曲はサーバーに合わせて変更可能です。</p>
+              <h4>主な機能</h4>
+              <ul>
+                <li>車両追従＆周囲プレイヤーへの同期再生</li>
+                <li>車両との距離による音量減衰</li>
+                <li>車両音量・個人音量の個別調整</li>
+                <li>全楽曲・アルバム・アーティストの閲覧</li>
+                <li>お気に入り・カスタムプレイリスト・曲検索</li>
+                <li>再生 / 一時停止 / 前へ / 次へ / リピート</li>
+                <li>日本語 / 英語UI</li>
+                <li>通常用 / 業務用カーオーディオ</li>
+                <li>ON DUTY中のジョブ専用楽曲</li>
+                <li>オリジナルMP3の追加、ジョブ・楽曲設定のカスタマイズ</li>
+              </ul>
+              <h4>対応環境</h4>
+              <p>QBCore または Qbox / ox_inventory / oxmysql / OneSync / 対応するFiveMサーバー</p>
+              <h4>商品に含まれるもの</h4>
+              <p>FiveMリソース本体、設定ファイル、カーオーディオ用アイテム画像、収録楽曲、日本語 / 英語UI、日本語 / 英語のINSTALL.txt、LICENSE。</p>
+              <h4>導入・使用方法</h4>
+              <p><code>yuki_car_audio</code> をresourcesフォルダに配置し、同梱アイテムと画像をインベントリに登録してください。依存リソースを起動し、<code>server.cfg</code> に <code>ensure yuki_car_audio</code> を追加します。必要に応じてジョブと楽曲を設定してください。必要なデータベーステーブルは自動作成されます。</p>
+              <p>車両に乗り、インベントリからカーオーディオアイテムを使用して楽曲を選ぶと再生できます。詳しい手順は同梱のINSTALL.txtをご確認ください。</p>
+              <h4>ライセンス</h4>
+              <p>MOD本体および収録楽曲の無断転載・再アップロード・再配布・再販売は禁止です。使用条件は同梱のLICENSEをご確認ください。</p>
+            </div>
+          </details>
+
+          <details class="info-language">
+            <summary>🇬🇧 English product details &amp; setup</summary>
+            <div class="language-body" lang="en">
+              <p>YUKI LAB CAR AUDIO is a vehicle-attached, synchronized audio system for FiveM. Music plays from your vehicle, follows it while driving and stays synchronized for nearby players. Volume decreases naturally with distance for immersive in-game audio.</p>
+              <p>Two usable car-audio items are included: the standard player with access to the YUKI LAB music library, and a professional version that unlocks configurable job-specific tracks while an eligible player is on duty. Example configurations for police, EMS and mechanics are included; server owners can customize jobs, tracks and related settings.</p>
+              <h4>Key features</h4>
+              <ul>
+                <li>Vehicle-following audio synchronized with nearby players</li>
+                <li>Distance-based volume attenuation</li>
+                <li>Separate vehicle and personal volume controls</li>
+                <li>Track, album and artist browsing</li>
+                <li>Favorites, custom playlists and music search</li>
+                <li>Play / pause / previous / next / repeat controls</li>
+                <li>Japanese and English user interfaces</li>
+                <li>Standard and professional car-audio items</li>
+                <li>Configurable on-duty job-specific music</li>
+                <li>Support for adding custom MP3 tracks</li>
+              </ul>
+              <h4>Included music library</h4>
+              <p>Browse included tracks, artists and albums directly in the UI, save favorites and create playlists. The supplied music library is bundled with the resource, so players do not need to provide external audio URLs to use the included tracks.</p>
+              <h4>Requirements</h4>
+              <p>QBCore or Qbox / ox_inventory / oxmysql / OneSync / compatible FiveM server.</p>
+              <h4>Package contents</h4>
+              <p>Complete FiveM resource, configuration files, audio-item images, bundled music library, Japanese / English UI, Japanese / English INSTALL.txt and LICENSE document.</p>
+              <h4>Installation &amp; usage</h4>
+              <p>Place <code>yuki_car_audio</code> in your resources folder, register the supplied inventory items and images, ensure the required dependencies are running, and add <code>ensure yuki_car_audio</code> to <code>server.cfg</code>. Configure supported jobs and music as needed. Required database tables are created automatically.</p>
+              <p>Enter a vehicle, use a car-audio item from your inventory and choose a track in the YUKI LAB interface to start playback. The professional item enables eligible job tracks only when duty conditions are met. Follow the included INSTALL.txt for full setup steps.</p>
+              <h4>License</h4>
+              <p>Unauthorized redistribution, resale, re-uploading or distribution of the resource or bundled tracks is prohibited. See the included LICENSE document for the full terms.</p>
+            </div>
+          </details>
+
+          <div class="details-checkout">
+            <div><strong>内容を確認できましたか？ / Ready to purchase?</strong><p>価格・税・割引はTebexの決済画面が優先されます。</p></div>
+            <a class="btn btn-primary" id="modalBuyBottom" href="https://yuki-lab.tebex.store/package/7635878" target="_blank" rel="noopener noreferrer">TEBEXで購入手続きへ ↗</a>
+          </div>
+          <div class="modal-below"><p>導入ガイドや追加サポートは、以下のリンクから確認できます。</p><div style="display:flex;gap:9px;flex-wrap:wrap"><a id="docsLink" class="btn btn-outline btn-small" href="#" target="_blank" rel="noopener noreferrer">DOCUMENTATION / INSTALL ↗</a></div></div>
+        </section>
       </div>
     </section>
   </div>
@@ -127,8 +239,8 @@
       let gallery=[...demoImages], active=0, autoTimer=null, lastFocus=null, live=false;
       let pointerStartX=null;
       const setLink=(id,url)=>{if(url) $(id).href=url};
-      setLink('storeNav',cfg.storeUrl);setLink('cardTebexLink',productURL);setLink('modalBuy',productURL);
-      setLink('discordLink',cfg.discordInvite);setLink('demoLink',cfg.gameplayDemoUrl);setLink('docsLink',cfg.docsUrl);
+      setLink('storeNav',cfg.storeUrl);setLink('cardTebexLink',productURL);setLink('modalBuy',productURL);setLink('modalBuyBottom',productURL);
+      setLink('discordLink',cfg.discordInvite);setLink('overviewLink',cfg.productOverviewUrl);setLink('demoLink',cfg.gameplayDemoUrl);setLink('docsLink',cfg.docsUrl);
       const stop=(ev)=>ev.stopPropagation();
       $('cardTebexLink').addEventListener('click',stop);
       const safeUrl=(value)=>{try{const u=new URL(value,location.href);return ['https:','http:'].includes(u.protocol)?u.href:null;}catch{return null}};
